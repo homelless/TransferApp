@@ -17,6 +17,18 @@ class ViewController: UIViewController {
     @IBOutlet var dataLabel: UILabel!
     //...
 
+    @IBAction func editDataWithProperty(_ sender: UIButton) {
+        // получаем вью контроллер, в который происходит переход
+        let storyboard = UIStoryboard(name: "main", bundle: nil)
+        var editScreen = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! UpdatingDataController
+        
+        // передаем данные
+        editScreen.updatingData = dataLabel.text ?? ""
+        
+        // переходим к следующему экрану
+        self.navigationController?.pushViewController(editScreen as! UIViewController, animated: true)
+        
+    }
 
 }
 
