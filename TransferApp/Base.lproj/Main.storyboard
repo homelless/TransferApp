@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -53,14 +54,30 @@
                                     <action selector="editDataWithProperty:" destination="hxW-Qc-VbP" eventType="touchUpInside" id="4Od-xK-9zS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSC-Rq-Obd">
+                                <rect key="frame" x="30" y="561" width="354" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Изменить с помощью segue">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Kk6-bY-OlL" kind="show" identifier="toEditScreen" id="m9L-9g-ILc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Miw-co-gCM"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
                             <constraint firstItem="MdA-KN-60J" firstAttribute="leading" secondItem="Miw-co-gCM" secondAttribute="leading" constant="30" id="EQS-ME-lB5"/>
+                            <constraint firstItem="Miw-co-gCM" firstAttribute="trailing" secondItem="nSC-Rq-Obd" secondAttribute="trailing" constant="30" id="GpD-3g-fJ9"/>
                             <constraint firstItem="MdA-KN-60J" firstAttribute="top" secondItem="NFf-Nr-gDJ" secondAttribute="bottom" constant="30" id="GuP-3e-XFV"/>
+                            <constraint firstItem="nSC-Rq-Obd" firstAttribute="leading" secondItem="Miw-co-gCM" secondAttribute="leading" constant="30" id="ROY-IV-Na8"/>
                             <constraint firstItem="Miw-co-gCM" firstAttribute="trailing" secondItem="MdA-KN-60J" secondAttribute="trailing" constant="30" id="TS4-X6-wAa"/>
                             <constraint firstItem="NFf-Nr-gDJ" firstAttribute="centerY" secondItem="FQ3-ng-dmV" secondAttribute="centerY" id="WOJ-F7-BnM"/>
+                            <constraint firstItem="nSC-Rq-Obd" firstAttribute="top" secondItem="MdA-KN-60J" secondAttribute="bottom" constant="30" id="ZqC-xT-rZL"/>
                             <constraint firstItem="NFf-Nr-gDJ" firstAttribute="centerX" secondItem="FQ3-ng-dmV" secondAttribute="centerX" id="dre-5U-AT1"/>
                         </constraints>
                     </view>
@@ -123,6 +140,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
