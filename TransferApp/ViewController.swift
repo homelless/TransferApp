@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, DataUpdateProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +60,50 @@ class ViewController: UIViewController {
             return
         }
         destinationController.updatingData = dataLabel.text ?? ""
+    }
+    
+    @IBAction func unwindToFirstScreen(_ segue: UIStoryboardSegue) {}
+    
+    func onDataUpdate(data: String) {
+        updatedData = data
+        updateLabel(withText: data)
+    }
+    
+    // переход от А к Б
+    // передача данных с помощью свойства и установка делегата
+    @IBAction func editDataWithDelegate(_ sender: UIButton) {
+        // получаем вью контроллер
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let editScreen = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        
+        // передаем данные
+        editScreen.updatingData = dataLabel.text ?? ""
+        
+        // устанавливаем текущий класс в качестве делегата
+        editScreen.handleUpdatedDataDelegate = self
+        
+        // открываем следующий экран
+        self.navigationController?.pushViewController(editScreen, animated: true)
+    }
+    
+    // переход от А к Б
+    // передача данных с помощью свойства и инициализация замыкания
+    @IBAction func editDataWithClosure(_ sender: UIButton) {
+        // получаем вью контроллер
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let editScreen = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        
+        // передаем данные
+        editScreen.updatingData = dataLabel.text ?? ""
+        // передаем необходимое замыкание
+        editScreen.completionHandler = { [unowned self] updatedValue in
+            updatedData = updatedValue
+            updateLabel(withText: updatedValue)
+            // открываем следующий экран
+            self.navigationController?.pushViewController(editScreen, animated: true)
+            
+            
+        }
     }
     
 }

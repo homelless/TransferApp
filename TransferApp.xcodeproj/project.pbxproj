@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0235C9E2B77A7D100645C36 /* DataUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0235C9D2B77A7D100645C36 /* DataUpdate.swift */; };
 		D07C7CA92B6E62EA00BC7DD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07C7CA82B6E62EA00BC7DD5 /* AppDelegate.swift */; };
 		D07C7CAB2B6E62EA00BC7DD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07C7CAA2B6E62EA00BC7DD5 /* SceneDelegate.swift */; };
 		D07C7CAD2B6E62EA00BC7DD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07C7CAC2B6E62EA00BC7DD5 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0235C9D2B77A7D100645C36 /* DataUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUpdate.swift; sourceTree = "<group>"; };
 		D07C7CA52B6E62EA00BC7DD5 /* TransferApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransferApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07C7CA82B6E62EA00BC7DD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D07C7CAA2B6E62EA00BC7DD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				D07C7CAA2B6E62EA00BC7DD5 /* SceneDelegate.swift */,
 				D07C7CAC2B6E62EA00BC7DD5 /* ViewController.swift */,
 				D07C7CBC2B6E6A5B00BC7DD5 /* SecondViewController.swift */,
+				D0235C9D2B77A7D100645C36 /* DataUpdate.swift */,
 				D07C7CAE2B6E62EA00BC7DD5 /* Main.storyboard */,
 				D07C7CB12B6E62EC00BC7DD5 /* Assets.xcassets */,
 				D07C7CB32B6E62EC00BC7DD5 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				D07C7CBD2B6E6A5B00BC7DD5 /* SecondViewController.swift in Sources */,
 				D07C7CAD2B6E62EA00BC7DD5 /* ViewController.swift in Sources */,
+				D0235C9E2B77A7D100645C36 /* DataUpdate.swift in Sources */,
 				D07C7CA92B6E62EA00BC7DD5 /* AppDelegate.swift in Sources */,
 				D07C7CAB2B6E62EA00BC7DD5 /* SceneDelegate.swift in Sources */,
 			);
